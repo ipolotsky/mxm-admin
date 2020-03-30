@@ -9,12 +9,13 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          MxM admin panel
-        </p>
+        <p>MxM Storm panel</p>
+
         <CurrentQuestion/>
-          <h3>Questions:</h3>
-          <QuestionList/>
+
+        <h3>Questions:</h3>
+        <QuestionList/>
+
       </header>
     </div>
   );

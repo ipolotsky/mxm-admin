@@ -21,7 +21,7 @@ export async function apiCurrentQuestion()  {
          */
 
     let dummyNoQuestion = {"status": "ok", "result": null};
-    let dummyQuestion = {"status": "ok", "result": {"id": 1, "state": "closed", "text": "What is correct answer? What is correct answer? What is correct answer?What is correct answer?What is correct answer?What is correct answer? What is correct answer?", "image": null, "choices": ["correct", "incorrect"], "correct_answer": "correct", "answers": []}}
+    let dummyQuestion = {"status": "ok", "result": {"id": 1, "text": "What is correct answer?", "image": null, "choices": ["correct", "incorrect"]}}
 
     return dummyQuestion.result;
 }
@@ -49,6 +49,35 @@ export async function apiGetQuestions()  {
          */
 
     let dummyNoQuestions = {"status": "ok", "result": []}
-    let dummyQuestions = {"status": "ok", "result": [{"id": 1, "state": "closed", "text": "What is correct answer?", "image": null, "choices": ["correct", "incorrect"], "correct_answer": "correct", "answers": []}, {"id": 2, "state": "closed", "text": "Another question", "image": null, "choices": ["aaaaaa", "bbbbbb", "ccccccc", "dddddddd"], "correct_answer": "aaaaaa", "answers": []}, {"id": 3, "state": "closed", "text": "Third onw", "image": null, "choices": ["qwer", "qwerty", "asdf", "asdfgh"], "correct_answer": "qwerty", "answers": []}]}
+    let dummyQuestions = {"status": "ok", "result": [{"id": 1, "state": "open", "text": "What is correct answer?", "image": null, "choices": ["correct", "incorrect"], "correct_answer": "correct", "answers": []}, {"id": 2, "state": "closed", "text": "Another question", "image": null, "choices": ["aaaaaa", "bbbbbb", "ccccccc", "dddddddd"], "correct_answer": "aaaaaa", "answers": []}, {"id": 3, "state": "closed", "text": "Third onw", "image": null, "choices": ["qwer", "qwerty", "asdf", "asdfgh"], "correct_answer": "qwerty", "answers": []}]}
     return dummyQuestions.result
+}
+
+export async function apiSetQuestionState(questionId, state) {
+
+/*    try {
+        // @ts-ignore
+        const result = await fetch("https://tinder.pirotech.space/storm/question/set_state", {
+            headers: {
+                "X-User": "SPARKY",
+            },
+            method: "POST",
+            body: JSON.stringify({
+                state: state,
+                question_id: questionId
+            }),
+        });
+
+        if (result.status !== 200) {
+            throw Error(`Failed to set state ${JSON.stringify(result)}, ${JSON.stringify(await result.json())}`);
+        }
+        return true;
+    } catch (e) {
+        console.log(JSON.stringify(e));
+        throw e;
+    }
+
+ */
+    console.log("State changed. Question: " + questionId + " State: " + state);
+    return true;
 }

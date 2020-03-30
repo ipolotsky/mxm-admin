@@ -4,7 +4,7 @@ const Question = ({question}) => (
     <div className="question-content">
         <p>Id: {question.id}</p>
         <p>Question: {question.text}</p>
-        <p>State: {question.state}</p>
+        {question.state && (<p>State: {question.state}</p>)}
         {question.choices && (<p>Choices: {JSON.stringify(question.choices)}</p>)}
         {question.correct_answer && (<p>Correct answer: {question.correct_answer}</p>)}
         {question.answers && (
