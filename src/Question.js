@@ -25,7 +25,7 @@ const Question = ({question}) => (
                         <tr>
                             <th scope="row">Choices</th>
                             <td>
-                                 {question.choices.map(choice => (<div>{choice}</div>))}
+                                 {question.choices.map((choice, index) => (<div key={index}>{choice}</div>))}
                             </td>
                         </tr>
                     )}
@@ -53,8 +53,8 @@ const Question = ({question}) => (
                                 </thead>
                                 <tbody>
 
-                                {[].concat(question.answers).sort((a, b) => (a.created_at > b.created_at) ? -1 : 1).map(answer => (
-                                    <tr>
+                                {[].concat(question.answers).sort((a, b) => (a.created_at > b.created_at) ? -1 : 1).map((answer, index) => (
+                                    <tr key={index}>
                                         <th scope="row">{answer.user}</th>
                                         <td>{answer.answer}</td>
                                     </tr>

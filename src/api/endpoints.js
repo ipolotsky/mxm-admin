@@ -10,7 +10,6 @@ export async function apiCurrentQuestion()  {
 
             if (question.status === 200) {
                 let response = await question.json();
-                console.log("Current question " + JSON.stringify(response.result));
                 return response.result;
             }
             throw Error(`Failed ${question}, ${await question.json()}`);
