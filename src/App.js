@@ -1,6 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './images/image.png';
 import './App.css';
+import CurrentQuestion from "./CurrentQuestion";
+import QuestionList from "./QuestionList";
 
 function App() {
   return (
@@ -8,16 +10,11 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          MxM admin panel
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <CurrentQuestion/>
+          <h3>Questions:</h3>
+          <QuestionList/>
       </header>
     </div>
   );

@@ -3,8 +3,39 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
+}
+
+.checked {
+  color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.current-question {
+  padding: 50px;
+  max-width: 70%;
+  border: blanchedalmond solid 1px;
+  border-radius: 10px;
+  margin: 40px;
+}
+
+.question-in-list {
+  padding: 10px;
+  border: blanchedalmond solid 1px;
+  border-radius: 10px;
+  margin: 20px;
+  background-color: darkslategray;
+}
+
+.question-content {
+  text-align: left;
+}
+
+.current-question h2 {
+  color: orangered;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -19,8 +50,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-top: 5vh;
+  /*justify-content: center;*/
+  font-size: calc(10px + 1vmin);
   color: white;
 }
 
