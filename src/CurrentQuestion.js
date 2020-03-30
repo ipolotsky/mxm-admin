@@ -51,7 +51,7 @@ const CurrentQuestion = () => {
             {/*</button>*/}
 
             {/*ВОТ ТАК НЕ НАДО*/}
-            <button onClick={() => changeState('openToAnswer')} className="start-in-list">Request answers</button>
+            {/*<button onClick={() => changeState('openToAnswer')} className="start-in-list">Request answers</button>*/}
             <button onClick={() => changeState('closed')} className="start-in-list closed">Close question</button>
         </div>)
 }
