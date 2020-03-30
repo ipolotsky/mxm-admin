@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/mxm-admin/static/css/main.7053b39b.chunk.css",
-    "main.js": "/mxm-admin/static/js/main.4d2f10f6.chunk.js",
-    "main.js.map": "/mxm-admin/static/js/main.4d2f10f6.chunk.js.map",
+    "main.js": "/mxm-admin/static/js/main.859e8892.chunk.js",
+    "main.js.map": "/mxm-admin/static/js/main.859e8892.chunk.js.map",
     "runtime-main.js": "/mxm-admin/static/js/runtime-main.e60dc165.js",
     "runtime-main.js.map": "/mxm-admin/static/js/runtime-main.e60dc165.js.map",
     "static/js/2.30c6002e.chunk.js": "/mxm-admin/static/js/2.30c6002e.chunk.js",
     "static/js/2.30c6002e.chunk.js.map": "/mxm-admin/static/js/2.30c6002e.chunk.js.map",
     "index.html": "/mxm-admin/index.html",
-    "precache-manifest.8e497c90d12012fb142fdcc7b5f88c1c.js": "/mxm-admin/precache-manifest.8e497c90d12012fb142fdcc7b5f88c1c.js",
+    "precache-manifest.7f84703e661720f50c1abe8f0082d956.js": "/mxm-admin/precache-manifest.7f84703e661720f50c1abe8f0082d956.js",
     "service-worker.js": "/mxm-admin/service-worker.js",
     "static/css/main.7053b39b.chunk.css.map": "/mxm-admin/static/css/main.7053b39b.chunk.css.map",
     "static/js/2.30c6002e.chunk.js.LICENSE.txt": "/mxm-admin/static/js/2.30c6002e.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.e60dc165.js",
     "static/js/2.30c6002e.chunk.js",
     "static/css/main.7053b39b.chunk.css",
-    "static/js/main.4d2f10f6.chunk.js"
+    "static/js/main.859e8892.chunk.js"
   ]
 }
