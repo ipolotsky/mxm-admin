@@ -27,6 +27,7 @@ const QuestionList = () => {
             {questions.map(question => (
                 <div key={question.id} className="question-in-list">
                     <Question question={question}/>
+                    <a href="#current">show me current</a>
                     {question.state === 'closed' &&
                         (<button onClick={() => openQuestion(question.id)} className="start-in-list">Show question</button>)}
                 </div>

@@ -11,11 +11,11 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>MxM Storm panel</p>
 
+        <a name="current"></a>
         <CurrentQuestion/>
 
         <h3>Questions:</h3>
         <QuestionList/>
-
       </header>
     </div>
   );
