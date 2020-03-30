@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  margin-bottom: 80px;
+  word-wrap: break-word;
 }
 
 .App-logo {
@@ -7,26 +8,25 @@
   pointer-events: none;
 }
 
+.no-pointer {
+  cursor: default;
+}
+
 .checked {
-  color: black;
+  color: #282c34;
   position: absolute;
-  top: 0;
-  left: 0;
+  top:0;
 }
 
 .current-question {
-  padding: 50px;
   max-width: 70%;
   border: blanchedalmond solid 1px;
   border-radius: 10px;
-  margin: 40px;
 }
 
 .question-in-list {
-  padding: 10px;
   border: blanchedalmond solid 1px;
   border-radius: 10px;
-  margin: 20px;
   background-color: darkslategray;
 }
 
@@ -39,8 +39,6 @@
 }
 
 .start-in-list {
-  margin: 10px;
-  padding: 10px;
   background-color: green;
   border-radius: 5px;
   font-size: 15px;
@@ -60,7 +58,6 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;

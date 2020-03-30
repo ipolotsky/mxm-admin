@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Question from "./Question";
 import {apiCurrentQuestion, apiSetQuestionState} from "./api/endpoints";
 
-const CurrentQuestion = () => {
+const CurrentQuestion = (props) => {
 
     const [currentQuestion, setCurrentQuestion] = useState({});
     const [loader, setLoader] = useState(false);
@@ -13,13 +13,9 @@ const CurrentQuestion = () => {
         setTimeout(() => setLoader(false), 500);
     }
 
-    async function changeNextState() {
-        let newState = currentQuestion.state === 'open' ? 'openToAnswer' : 'closed';
-        await apiSetQuestionState(currentQuestion.id, newState);
-    }
-
     async function changeState(newState) {
         await apiSetQuestionState(currentQuestion.id, newState);
+        props.updateQuestions();
     }
 
     useEffect(() => {
@@ -32,28 +28,32 @@ const CurrentQuestion = () => {
 
     if (currentQuestion === null) {
         return  (
-            <div className="current-question">
-                {loader && <span className="checked">checked</span>}
-                <h2>No current question</h2>
+            <div className="row justify-content-center">
+                <div className="col-11">
+                    <div className="jumbotron">
+                        {loader && <span className="checked">synced</span>}
+                        <h2>No current question</h2>
+                    </div>
+                </div>
             </div>)
     }
 
     return (
-        <div className="current-question">
-            {loader && <span className="checked">checked</span>}
-            <h2>Current question:</h2>
-            <Question question={currentQuestion}/>
-
-            {/*ВОТ ТАК НАДО, ЖДЕМ, КОГДА БУДЕТ ПОЛЕ STATE ПРИХОДИТЬ ОТ СЕРВЕРА*/}
-            {/*<button onClick={ changeNextState } className="start-in-list">*/}
-            {/*    {currentQuestion.state === 'open' && (<span>Request answers</span>)}*/}
-            {/*    {currentQuestion.state === 'openToAnswer' && (<span>Stop requesting answers. Close.</span>)}*/}
-            {/*</button>*/}
-
-            {/*ВОТ ТАК НЕ НАДО*/}
-            {/*<button onClick={() => changeState('openToAnswer')} className="start-in-list">Request answers</button>*/}
-            <button onClick={() => changeState('closed')} className="start-in-list closed">Close question</button>
-        </div>)
+        <div className="row justify-content-center">
+            <div className="col-11">
+                <div className="jumbotron">
+                    {loader && <span className="checked">synced</span>}
+                    <div className="container">
+                        <h1 className="display-5">Current question</h1>
+                        <p>
+                            <Question question={currentQuestion}/>
+                        </p>
+                        <p><button onClick={() => changeState('closed')} className="btn btn-danger btn-lg" href="#" role="button">Close question</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
 }
 
 export default CurrentQuestion
