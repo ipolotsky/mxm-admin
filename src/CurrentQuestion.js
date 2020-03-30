@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Question from "./Question";
+import {apiCurrentQuestion} from "./api/endpoints";
 
 const CurrentQuestion = () => {
 
@@ -8,31 +9,7 @@ const CurrentQuestion = () => {
 
     async function getCurrentQuestion() {
         setLoader(true);
-        /*
-        try {
-            const question = await fetch("https://tinder.pirotech.space/storm/question/", {
-                headers: {
-                    "X-User": "SPARKY"
-                },
-            });
-
-            if (question.status === 200) {
-                let response = await question.json();
-                console.log("Current question " + JSON.stringify(response.result));
-                alert(JSON.stringify(response.result));
-                return response;
-            }
-            throw Error(`Failed ${question}, ${await question.json()}`);
-        } catch (e) {
-            console.log(JSON.stringify(e));
-            throw e;
-        }
-         */
-
-        let dummyNoQuestion = {"status": "ok", "result": null};
-        let dummyQuestion = {"status": "ok", "result": {"id": 1, "state": "closed", "text": "What is correct answer? What is correct answer? What is correct answer?What is correct answer?What is correct answer?What is correct answer? What is correct answer?", "image": null, "choices": ["correct", "incorrect"], "correct_answer": "correct", "answers": []}}
-
-        setCurrentQuestion(dummyQuestion.result);
+        setCurrentQuestion(await apiCurrentQuestion());
         setTimeout(() => setLoader(false), 500);
     }
 
