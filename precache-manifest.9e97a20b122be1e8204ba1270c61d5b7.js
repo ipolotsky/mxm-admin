@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dae7e91055245eccec93f4f9b2b88a2c",
+    "revision": "3178983e8c98f9a7bd0869a66b214dbd",
     "url": "/mxm-admin/index.html"
   },
   {
-    "revision": "b8455cfaeaf34743a591",
-    "url": "/mxm-admin/static/css/main.7053b39b.chunk.css"
+    "revision": "9dbece6eabfab4c82102",
+    "url": "/mxm-admin/static/css/main.68f015b0.chunk.css"
   },
   {
-    "revision": "212f35f9c13b16224280",
-    "url": "/mxm-admin/static/js/2.30c6002e.chunk.js"
+    "revision": "07b9b801718ed359519e",
+    "url": "/mxm-admin/static/js/2.cdff2383.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/mxm-admin/static/js/2.30c6002e.chunk.js.LICENSE.txt"
+    "url": "/mxm-admin/static/js/2.cdff2383.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b8455cfaeaf34743a591",
-    "url": "/mxm-admin/static/js/main.859e8892.chunk.js"
+    "revision": "9dbece6eabfab4c82102",
+    "url": "/mxm-admin/static/js/main.45721f06.chunk.js"
   },
   {
     "revision": "f8ffa97c1e87f579fc66",
