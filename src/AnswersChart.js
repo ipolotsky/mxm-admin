@@ -45,10 +45,10 @@ const AnswersChart = (props) => {
         xField: 'answer',
         yField: 'amount',
         meta: {
-            type: {
-                alias: 'Answer',
+            answer: {
+                alias: "Right answer: " + props.right,
             },
-            sales: {
+            amount: {
                 alias: 'Count',
             },
         },

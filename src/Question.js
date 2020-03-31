@@ -67,7 +67,7 @@ const Question = ({question}) => (
                             </div>
 
                             {Array.isArray(question.choices) && question.choices.length  && (<div>
-                                <AnswersChart choices={question.choices} answers={question.answers}/>
+                                <AnswersChart right={question.correct_answer} choices={question.choices} answers={question.answers}/>
                             </div>)}
                         </p>
                     </div>
