@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import AnswersChart from "./AnswersChart";
 
 const Question = ({question}) => (
     <div className="card">
@@ -42,7 +43,7 @@ const Question = ({question}) => (
 
                 {question.answers && (
                     <div>
-                        <h5 className="card-title">Answers:</h5>
+                        <h5 className="card-title">Answers</h5>
                         <p className="card-text">
                             <table className="table table-striped table-dark">
                                 <thead>
@@ -61,6 +62,13 @@ const Question = ({question}) => (
                                 ))}
                                 </tbody>
                             </table>
+                            <div>
+                                Total answers: {Array.isArray(question.answers) ? question.answers.length : 0}
+                            </div>
+
+                            {Array.isArray(question.choices) && question.choices.length  && (<div>
+                                <AnswersChart choices={question.choices} answers={question.answers}/>
+                            </div>)}
                         </p>
                     </div>
                 )}
