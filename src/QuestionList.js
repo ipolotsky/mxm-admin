@@ -13,6 +13,10 @@ const QuestionList = (props) => {
         }
     }
 
+    function truncate(source, size) {
+        return source.length > size ? source.slice(0, size - 1) + "…" : source;
+    }
+
     return (
         <div className="row justify-content-center">
             <div className="col-11 col-md-7" id="accordion">
@@ -24,7 +28,7 @@ const QuestionList = (props) => {
                                     <h5 className="mb-0">
                                         <button className="btn btn-link" data-toggle="collapse" data-target={"#question" + question.id}
                                                 aria-expanded="true" aria-controls={"question" + question.id}>
-                                            {question.id}. {question.text}
+                                            {question.id}. {truncate(question.text, 30)}
                                         </button>
                                     </h5>
                                 </div>
