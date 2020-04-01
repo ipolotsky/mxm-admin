@@ -45,30 +45,33 @@ const Question = ({question}) => (
                     <div>
                         <h5 className="card-title">Answers</h5>
                         <p className="card-text">
-                            <table className="table table-striped table-dark">
-                                <thead>
-                                <tr>
-                                    <th scope="col">User</th>
-                                    <th scope="col">Answer</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-
-                                {[].concat(question.answers).sort((a, b) => (a.created_at > b.created_at) ? -1 : 1).map((answer, index) => (
-                                    <tr key={index}>
-                                        <th scope="row">{answer.user}</th>
-                                        <td>{answer.answer}</td>
+                            <div className="answers-card-table">
+                                <table className="table table-striped table-dark">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">User</th>
+                                        <th scope="col">Answer</th>
                                     </tr>
-                                ))}
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody>
+
+                                    {[].concat(question.answers).sort((a, b) => (a.created_at > b.created_at) ? -1 : 1).map((answer, index) => (
+                                        <tr key={index}>
+                                            <th scope="row">{answer.user}</th>
+                                            <td>{answer.answer}</td>
+                                        </tr>
+                                    ))}
+                                    </tbody>
+                                </table>
+                            </div>
                             <div>
                                 Total answers: {Array.isArray(question.answers) ? question.answers.length : 0}
                             </div>
 
-                            {Array.isArray(question.choices) && question.choices.length  && (<div>
+                            {Array.isArray(question.choices) && question.choices.length != 0  && (<div>
                                 <AnswersChart right={question.correct_answer} choices={question.choices} answers={question.answers}/>
                             </div>)}
+
                         </p>
                     </div>
                 )}
