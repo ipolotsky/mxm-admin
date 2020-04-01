@@ -20,7 +20,7 @@ const QuestionList = (props) => {
     return (
         <div className="row justify-content-center">
             <div className="col-11 col-md-7" id="accordion">
-                {[].concat(props.questions).sort((a, b) => (a.state < b.state) ? 1 : (a.state === b.state) ? ((a.id > b.id) ? 1 : -1) : -1 ).map(question => (
+                {props.questions.sort((a, b) => (a.state < b.state) ? 1 : (a.state === b.state) ? ((a.id > b.id) ? 1 : -1) : -1 ).map(question => (
                     <div key={question.id} className="card">
                         <div className="card-header" id="headingOne">
                             <div className="row">
